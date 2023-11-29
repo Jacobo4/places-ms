@@ -1,0 +1,701 @@
+{
+	"info": {
+		"_postman_id": "dd6f750a-6845-4d96-b24e-2b7137db4a0f",
+		"name": "Microservicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31219303",
+		"_collection_link": "https://loloweb.postman.co/workspace/My-Workspace~a739e9d4-0813-4099-8d32-09a4280e53c1/collection/31219303-dd6f750a-6845-4d96-b24e-2b7137db4a0f?action=share&source=collection_link&creator=31219303"
+	},
+	"item": [
+		{
+			"name": "Kong",
+			"item": [
+				{
+					"name": "Registrar servicio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"places\",\r\n    \"url\": \"http://{{places ms ip publica}}:8080\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Kong ip publica}}:8001/services",
+							"protocol": "http",
+							"host": [
+								"{{Kong ip publica}}"
+							],
+							"port": "8001",
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "measurements registry",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"measurements\",\r\n    \"url\": \"http://{{measurements ms ip publica}}:8080\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{Kong ip publica}}:8001/services",
+									"protocol": "http",
+									"host": [
+										"{{Kong ip publica}}"
+									],
+									"port": "8001",
+									"path": [
+										"services"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 28 Nov 2023 23:56:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "378"
+								},
+								{
+									"key": "X-Kong-Admin-Latency",
+									"value": "108"
+								},
+								{
+									"key": "Server",
+									"value": "kong/3.5.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"connect_timeout\": 60000,\n    \"path\": null,\n    \"read_timeout\": 60000,\n    \"host\": \"34.172.227.138\",\n    \"write_timeout\": 60000,\n    \"retries\": 5,\n    \"tls_verify\": null,\n    \"tls_verify_depth\": null,\n    \"name\": \"measurements\",\n    \"port\": 8080,\n    \"updated_at\": 1701215805,\n    \"client_certificate\": null,\n    \"tags\": null,\n    \"ca_certificates\": null,\n    \"id\": \"32ff3880-ab6a-40f2-a645-6fbb7e901c1e\",\n    \"enabled\": true,\n    \"protocol\": \"http\",\n    \"created_at\": 1701215805\n}"
+						},
+						{
+							"name": "variables registry",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"variables\",\r\n    \"url\": \"http://{{variables ms ip publica}}:8080\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{Kong ip publica}}:8001/services",
+									"protocol": "http",
+									"host": [
+										"{{Kong ip publica}}"
+									],
+									"port": "8001",
+									"path": [
+										"services"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 28 Nov 2023 23:57:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "374"
+								},
+								{
+									"key": "X-Kong-Admin-Latency",
+									"value": "9"
+								},
+								{
+									"key": "Server",
+									"value": "kong/3.5.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"connect_timeout\": 60000,\n    \"path\": null,\n    \"read_timeout\": 60000,\n    \"host\": \"34.30.249.248\",\n    \"write_timeout\": 60000,\n    \"retries\": 5,\n    \"tls_verify\": null,\n    \"tls_verify_depth\": null,\n    \"name\": \"variables\",\n    \"port\": 8080,\n    \"updated_at\": 1701215878,\n    \"client_certificate\": null,\n    \"tags\": null,\n    \"ca_certificates\": null,\n    \"id\": \"3b6d6487-066e-4c15-989e-ffe7aa25e020\",\n    \"enabled\": true,\n    \"protocol\": \"http\",\n    \"created_at\": 1701215878\n}"
+						},
+						{
+							"name": "Places registry",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"places\",\r\n    \"url\": \"http://{{places ms ip publica}}:8080\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{Kong ip publica}}:8001/services",
+									"protocol": "http",
+									"host": [
+										"{{Kong ip publica}}"
+									],
+									"port": "8001",
+									"path": [
+										"services"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 03:06:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "370"
+								},
+								{
+									"key": "X-Kong-Admin-Latency",
+									"value": "25"
+								},
+								{
+									"key": "Server",
+									"value": "kong/3.5.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"connect_timeout\": 60000,\n    \"path\": null,\n    \"read_timeout\": 60000,\n    \"host\": \"34.41.86.126\",\n    \"write_timeout\": 60000,\n    \"retries\": 5,\n    \"tls_verify\": null,\n    \"tls_verify_depth\": null,\n    \"name\": \"places\",\n    \"port\": 8080,\n    \"updated_at\": 1701227197,\n    \"client_certificate\": null,\n    \"tags\": null,\n    \"ca_certificates\": null,\n    \"id\": \"8ef50005-67f9-4d0c-957a-b03169382525\",\n    \"enabled\": true,\n    \"protocol\": \"http\",\n    \"created_at\": 1701227197\n}"
+						}
+					]
+				},
+				{
+					"name": "Registrar ruta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hosts\": [\"{{places ms ip publica}}\", \"0.0.0.0\", \"{{Kong ip publica}}\"],\r\n     \"paths\": [\"/places\"],\r\n    \"strip_path\": false,\r\n    \"methods\": [\r\n        \"GET\"\r\n    ],\r\n    \"service\": {\r\n        \"id\": \"{{id places sevices}}\"\r\n       },\r\n    \"preserve_host\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Kong ip publica}}:8001/routes/",
+							"protocol": "http",
+							"host": [
+								"{{Kong ip publica}}"
+							],
+							"port": "8001",
+							"path": [
+								"routes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "measuremenets route",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"hosts\": [\"{{measurements ms ip publica}}\", \"0.0.0.0\", \"{{Kong ip publica}}\"],\r\n     \"paths\": [\"/measurements\"],\r\n    \"strip_path\": false,\r\n    \"methods\": [\r\n        \"GET\"\r\n    ],\r\n    \"service\": {\r\n        \"id\": \"{{id measurementes sevices}}\"\r\n       },\r\n    \"preserve_host\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{Kong ip publica}}:8001/routes/",
+									"protocol": "http",
+									"host": [
+										"{{Kong ip publica}}"
+									],
+									"port": "8001",
+									"path": [
+										"routes",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 00:03:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "526"
+								},
+								{
+									"key": "X-Kong-Admin-Latency",
+									"value": "46"
+								},
+								{
+									"key": "Server",
+									"value": "kong/3.5.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"protocols\": [\n        \"http\",\n        \"https\"\n    ],\n    \"request_buffering\": true,\n    \"response_buffering\": true,\n    \"regex_priority\": 0,\n    \"hosts\": [\n        \"34.172.227.138\",\n        \"0.0.0.0\",\n        \"104.197.21.197\"\n    ],\n    \"methods\": [\n        \"GET\"\n    ],\n    \"snis\": null,\n    \"updated_at\": 1701216205,\n    \"sources\": null,\n    \"name\": null,\n    \"path_handling\": \"v0\",\n    \"strip_path\": false,\n    \"service\": {\n        \"id\": \"32ff3880-ab6a-40f2-a645-6fbb7e901c1e\"\n    },\n    \"tags\": null,\n    \"preserve_host\": true,\n    \"id\": \"f1d06a64-0294-424f-8313-8d9d50bde2d5\",\n    \"headers\": null,\n    \"destinations\": null,\n    \"https_redirect_status_code\": 426,\n    \"paths\": [\n        \"/measurements\"\n    ],\n    \"created_at\": 1701216205\n}"
+						},
+						{
+							"name": "variables route",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"hosts\": [\"{{variables ms ip publica}}\", \"0.0.0.0\", \"{{Kong ip publica}}\"],\r\n     \"paths\": [\"/variables\"],\r\n    \"strip_path\": false,\r\n    \"methods\": [\r\n        \"GET\"\r\n    ],\r\n    \"service\": {\r\n        \"id\": \"{{id variables sevices}}\"\r\n       },\r\n    \"preserve_host\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{Kong ip publica}}:8001/routes/",
+									"protocol": "http",
+									"host": [
+										"{{Kong ip publica}}"
+									],
+									"port": "8001",
+									"path": [
+										"routes",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 00:04:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "522"
+								},
+								{
+									"key": "X-Kong-Admin-Latency",
+									"value": "10"
+								},
+								{
+									"key": "Server",
+									"value": "kong/3.5.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"protocols\": [\n        \"http\",\n        \"https\"\n    ],\n    \"request_buffering\": true,\n    \"response_buffering\": true,\n    \"regex_priority\": 0,\n    \"hosts\": [\n        \"34.30.249.248\",\n        \"0.0.0.0\",\n        \"104.197.21.197\"\n    ],\n    \"methods\": [\n        \"GET\"\n    ],\n    \"snis\": null,\n    \"updated_at\": 1701216290,\n    \"sources\": null,\n    \"name\": null,\n    \"path_handling\": \"v0\",\n    \"strip_path\": false,\n    \"service\": {\n        \"id\": \"3b6d6487-066e-4c15-989e-ffe7aa25e020\"\n    },\n    \"tags\": null,\n    \"preserve_host\": true,\n    \"id\": \"fb66d4e8-3c81-41f0-89ea-619154916d90\",\n    \"headers\": null,\n    \"destinations\": null,\n    \"https_redirect_status_code\": 426,\n    \"paths\": [\n        \"/variables\"\n    ],\n    \"created_at\": 1701216290\n}"
+						},
+						{
+							"name": "Places route",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"hosts\": [\"{{places ms ip publica}}\", \"0.0.0.0\", \"{{Kong ip publica}}\"],\r\n     \"paths\": [\"/places\"],\r\n    \"strip_path\": false,\r\n    \"methods\": [\r\n        \"GET\"\r\n    ],\r\n    \"service\": {\r\n        \"id\": \"{{id places sevices}}\"\r\n       },\r\n    \"preserve_host\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{Kong ip publica}}:8001/routes/",
+									"protocol": "http",
+									"host": [
+										"{{Kong ip publica}}"
+									],
+									"port": "8001",
+									"path": [
+										"routes",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Nov 2023 03:08:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "518"
+								},
+								{
+									"key": "X-Kong-Admin-Latency",
+									"value": "11"
+								},
+								{
+									"key": "Server",
+									"value": "kong/3.5.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"protocols\": [\n        \"http\",\n        \"https\"\n    ],\n    \"request_buffering\": true,\n    \"response_buffering\": true,\n    \"regex_priority\": 0,\n    \"hosts\": [\n        \"34.41.86.126\",\n        \"0.0.0.0\",\n        \"104.197.21.197\"\n    ],\n    \"methods\": [\n        \"GET\"\n    ],\n    \"snis\": null,\n    \"updated_at\": 1701227290,\n    \"sources\": null,\n    \"name\": null,\n    \"path_handling\": \"v0\",\n    \"strip_path\": false,\n    \"service\": {\n        \"id\": \"8ef50005-67f9-4d0c-957a-b03169382525\"\n    },\n    \"tags\": null,\n    \"preserve_host\": true,\n    \"id\": \"bd16ad5b-d7e9-48e3-b3cd-5e6750d9ead8\",\n    \"headers\": null,\n    \"destinations\": null,\n    \"https_redirect_status_code\": 426,\n    \"paths\": [\n        \"/places\"\n    ],\n    \"created_at\": 1701227290\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Variables",
+			"item": [
+				{
+					"name": "Create Variable",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Temperatura\",\r\n    \"data\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{variables ms ip publica}}:8080/variablecreate/",
+							"protocol": "http",
+							"host": [
+								"{{variables ms ip publica}}"
+							],
+							"port": "8080",
+							"path": [
+								"variablecreate",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Variables",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Temperatura\",\r\n    \"data\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{variables ms ip publica}}:8080/variables/",
+							"protocol": "http",
+							"host": [
+								"{{variables ms ip publica}}"
+							],
+							"port": "8080",
+							"path": [
+								"variables",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Places",
+			"item": [
+				{
+					"name": "Create Place",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"RGD-101\",\r\n    \"data\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{places ms ip publica}}:8080/placecreate/",
+							"protocol": "http",
+							"host": [
+								"{{places ms ip publica}}"
+							],
+							"port": "8080",
+							"path": [
+								"placecreate",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Place",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"RGD-101\",\r\n    \"data\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{places ms ip publica}}:8080/places/",
+							"protocol": "http",
+							"host": [
+								"{{places ms ip publica}}"
+							],
+							"port": "8080",
+							"path": [
+								"places",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Measurements",
+			"item": [
+				{
+					"name": "Create Measurement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"variable\": 1,\r\n    \"value\": 25,\r\n    \"unit\": \"C\",\r\n    \"place\": \"ML\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{measurements ms ip publica}}:8080/measurementcreate/",
+							"protocol": "http",
+							"host": [
+								"{{measurements ms ip publica}}"
+							],
+							"port": "8080",
+							"path": [
+								"measurementcreate",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Measurements",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"variable\": 1,\r\n    \"value\": 24,\r\n    \"unit\": \"C\",\r\n    \"place\": \"ML\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{measurements ms ip publica}}:8080/measurements/",
+							"protocol": "http",
+							"host": [
+								"{{measurements ms ip publica}}"
+							],
+							"port": "8080",
+							"path": [
+								"measurements",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create many measurements",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"variable\": 1,\r\n        \"unit\": \"C\",\r\n        \"value\": 68.56,\r\n        \"place\": \"RGD-1\"\r\n    },\r\n    {\r\n        \"variable\": 1,\r\n        \"unit\": \"C\",\r\n        \"value\": 68.56,\r\n        \"place\": \"RGD-1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{measurements ms ip publica}}:8080/createmeasurements/",
+							"protocol": "http",
+							"host": [
+								"{{measurements ms ip publica}}"
+							],
+							"port": "8080",
+							"path": [
+								"createmeasurements",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
